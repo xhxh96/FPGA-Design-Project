@@ -1,0 +1,93 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
+| Date         : Sun Apr 01 18:48:13 2018
+| Host         : DESKTOP-AUP50F2 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file alarm_clock_control_sets_placed.rpt
+| Design       : alarm_clock
+| Device       : xc7a35t
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    40 |
+| Unused register locations in slices containing registers |   263 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               0 |            0 |
+| No           | No                    | Yes                    |              66 |           31 |
+| No           | Yes                   | No                     |              12 |           12 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              27 |           18 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------+-------------------------+-------------------------------+------------------+----------------+
+|          Clock Signal          |      Enable Signal      |        Set/Reset Signal       | Slice Load Count | Bel Load Count |
++--------------------------------+-------------------------+-------------------------------+------------------+----------------+
+|  clk_1s_BUFG                   | tmp_hour[5]_P_i_1_n_0   | tmp_hour_reg[5]_LDC_i_1_n_0   |                1 |              1 |
+|  clk_1s_BUFG                   |                         | tmp_hour_reg[0]_LDC_i_2_n_0   |                1 |              1 |
+|  clk_1s_BUFG                   |                         | tmp_hour_reg[1]_LDC_i_2_n_0   |                1 |              1 |
+|  clk_1s_BUFG                   |                         | tmp_hour_reg[2]_LDC_i_2_n_0   |                1 |              1 |
+|  clk_1s_BUFG                   |                         | tmp_hour_reg[3]_LDC_i_2_n_0   |                1 |              1 |
+|  clk_1s_BUFG                   |                         | tmp_hour_reg[4]_LDC_i_2_n_0   |                1 |              1 |
+|  clk_1s_BUFG                   |                         | tmp_hour_reg[5]_LDC_i_2_n_0   |                1 |              1 |
+|  clk_1s_BUFG                   |                         | tmp_minute_reg[0]_LDC_i_2_n_0 |                1 |              1 |
+|  clk_1s_BUFG                   |                         | tmp_minute_reg[1]_LDC_i_2_n_0 |                1 |              1 |
+|  clk_1s_BUFG                   |                         | tmp_minute_reg[2]_LDC_i_2_n_0 |                1 |              1 |
+|  clk_1s_BUFG                   |                         | tmp_minute_reg[3]_LDC_i_2_n_0 |                1 |              1 |
+|  clk_1s_BUFG                   |                         | tmp_minute_reg[4]_LDC_i_2_n_0 |                1 |              1 |
+|  clk_1s_BUFG                   |                         | tmp_minute_reg[5]_LDC_i_2_n_0 |                1 |              1 |
+|  clk_1s_BUFG                   | Alarm_i_1_n_0           | reset_IBUF                    |                1 |              1 |
+|  tmp_minute_reg[4]_LDC_i_1_n_0 |                         | tmp_minute_reg[4]_LDC_i_2_n_0 |                1 |              1 |
+|  clk_1s_BUFG                   | tmp_hour[5]_P_i_1_n_0   | tmp_hour_reg[0]_LDC_i_1_n_0   |                1 |              1 |
+|  clk_1s_BUFG                   | tmp_hour[5]_P_i_1_n_0   | tmp_hour_reg[1]_LDC_i_1_n_0   |                1 |              1 |
+|  clk_1s_BUFG                   | tmp_hour[5]_P_i_1_n_0   | tmp_hour_reg[2]_LDC_i_1_n_0   |                1 |              1 |
+|  clk_1s_BUFG                   | tmp_hour[5]_P_i_1_n_0   | tmp_hour_reg[3]_LDC_i_1_n_0   |                1 |              1 |
+|  clk_1s_BUFG                   | tmp_hour[5]_P_i_1_n_0   | tmp_hour_reg[4]_LDC_i_1_n_0   |                1 |              1 |
+|  tmp_minute_reg[5]_LDC_i_1_n_0 |                         | tmp_minute_reg[5]_LDC_i_2_n_0 |                1 |              1 |
+|  clk_1s_BUFG                   | tmp_minute[5]_P_i_1_n_0 | tmp_minute_reg[0]_LDC_i_1_n_0 |                1 |              1 |
+|  clk_1s_BUFG                   | tmp_minute[5]_P_i_1_n_0 | tmp_minute_reg[1]_LDC_i_1_n_0 |                1 |              1 |
+|  clk_1s_BUFG                   | tmp_minute[5]_P_i_1_n_0 | tmp_minute_reg[2]_LDC_i_1_n_0 |                1 |              1 |
+|  clk_1s_BUFG                   | tmp_minute[5]_P_i_1_n_0 | tmp_minute_reg[3]_LDC_i_1_n_0 |                1 |              1 |
+|  clk_1s_BUFG                   | tmp_minute[5]_P_i_1_n_0 | tmp_minute_reg[4]_LDC_i_1_n_0 |                1 |              1 |
+|  clk_1s_BUFG                   | tmp_minute[5]_P_i_1_n_0 | tmp_minute_reg[5]_LDC_i_1_n_0 |                1 |              1 |
+|  tmp_hour_reg[0]_LDC_i_1_n_0   |                         | tmp_hour_reg[0]_LDC_i_2_n_0   |                1 |              1 |
+|  tmp_hour_reg[1]_LDC_i_1_n_0   |                         | tmp_hour_reg[1]_LDC_i_2_n_0   |                1 |              1 |
+|  tmp_hour_reg[2]_LDC_i_1_n_0   |                         | tmp_hour_reg[2]_LDC_i_2_n_0   |                1 |              1 |
+|  tmp_hour_reg[3]_LDC_i_1_n_0   |                         | tmp_hour_reg[3]_LDC_i_2_n_0   |                1 |              1 |
+|  tmp_hour_reg[4]_LDC_i_1_n_0   |                         | tmp_hour_reg[4]_LDC_i_2_n_0   |                1 |              1 |
+|  tmp_hour_reg[5]_LDC_i_1_n_0   |                         | tmp_hour_reg[5]_LDC_i_2_n_0   |                1 |              1 |
+|  tmp_minute_reg[0]_LDC_i_1_n_0 |                         | tmp_minute_reg[0]_LDC_i_2_n_0 |                1 |              1 |
+|  tmp_minute_reg[1]_LDC_i_1_n_0 |                         | tmp_minute_reg[1]_LDC_i_2_n_0 |                1 |              1 |
+|  tmp_minute_reg[2]_LDC_i_1_n_0 |                         | tmp_minute_reg[2]_LDC_i_2_n_0 |                1 |              1 |
+|  tmp_minute_reg[3]_LDC_i_1_n_0 |                         | tmp_minute_reg[3]_LDC_i_2_n_0 |                1 |              1 |
+|  clk_1s_BUFG                   |                         | reset_IBUF                    |                2 |              6 |
+|  clk_1s_BUFG                   | LD_alarm_IBUF           | reset_IBUF                    |                5 |             14 |
+|  clk_IBUF_BUFG                 |                         | reset_IBUF                    |               17 |             48 |
++--------------------------------+-------------------------+-------------------------------+------------------+----------------+
+
+
