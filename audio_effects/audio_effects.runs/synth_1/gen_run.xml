@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1522388176">
-  <File Type="RDS-PROPCONSTRS" Name="AUDIO_FX_TOP_drc_synth.rpt"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1522578889">
   <File Type="PA-TCL" Name="AUDIO_FX_TOP.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="AUDIO_FX_TOP_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="AUDIO_FX_TOP.vds"/>
   <File Type="RDS-UTIL" Name="AUDIO_FX_TOP_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="AUDIO_FX_TOP_utilization_synth.pb"/>

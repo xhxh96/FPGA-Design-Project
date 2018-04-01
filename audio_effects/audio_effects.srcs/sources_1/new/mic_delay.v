@@ -41,7 +41,7 @@ module mic_delay(
     end
     
     always @ (posedge clk_read) begin
-        j <= (j == 19999) ? 0 : j+1;
+        j <= (j == 19999) ? 0 : j+2;
         data_out <= memory[j];
     end
     

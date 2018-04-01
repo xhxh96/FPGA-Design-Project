@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
-| Date         : Fri Mar 30 13:37:15 2018
+| Date         : Sun Apr 01 18:35:48 2018
 | Host         : DESKTOP-AUP50F2 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file AUDIO_FX_TOP_control_sets_placed.rpt
 | Design       : AUDIO_FX_TOP
@@ -22,8 +22,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    24 |
-| Unused register locations in slices containing registers |   114 |
+| Number of unique control sets                            |    25 |
+| Unused register locations in slices containing registers |   120 |
 +----------------------------------------------------------+-------+
 
 
@@ -33,10 +33,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              73 |           26 |
+| No           | No                    | No                     |              83 |           34 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |             149 |           41 |
-| Yes          | No                    | No                     |              96 |           56 |
+| Yes          | No                    | No                     |              96 |           51 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               8 |            3 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -55,15 +55,16 @@ Table of Contents
 |  CLK_IBUF_BUFG         |                            |                               |                4 |              4 |
 |  CLK_IBUF_BUFG         |                            | clock_unit1/count[11]_i_1_n_0 |                3 |             11 |
 |  u2/J_DA2_Pin4_OBUF    | u2/temp2                   |                               |                4 |             12 |
-| ~u1/J_MIC3_Pin4_OBUF   |                            |                               |                3 |             12 |
+| ~u1/J_MIC3_Pin4_OBUF   |                            |                               |                4 |             12 |
 |  CLK_IBUF_BUFG         |                            | J_MIC3_Pin1_OBUF_BUFG         |                3 |             12 |
 |  CLK_IBUF_BUFG         | note_a/new_clk0            |                               |                7 |             12 |
 |  CLK_IBUF_BUFG         | note_b/new_clk0            |                               |                6 |             12 |
-|  CLK_IBUF_BUFG         | note_c/new_clk0            |                               |                7 |             12 |
+|  CLK_IBUF_BUFG         | note_c/new_clk0            |                               |                6 |             12 |
 |  CLK_IBUF_BUFG         | note_d/new_clk0            |                               |                5 |             12 |
-|  CLK_IBUF_BUFG         | note_e/new_clk0            |                               |                8 |             12 |
+|  CLK_IBUF_BUFG         | note_e/new_clk0            |                               |                7 |             12 |
 |  CLK_IBUF_BUFG         | note_f/new_clk0            |                               |                9 |             12 |
-|  CLK_IBUF_BUFG         | note_g/new_clk0            |                               |               10 |             12 |
+|  CLK_IBUF_BUFG         | note_g/new_clk0            |                               |                7 |             12 |
+| ~SPECIAL_FEATURE_IBUF  |                            |                               |                5 |             12 |
 |  CLK_IBUF_BUFG         |                            | note_a/count0_carry__0_n_2    |                5 |             18 |
 |  CLK_IBUF_BUFG         |                            | note_b/count0_carry__0_n_2    |                5 |             18 |
 |  CLK_IBUF_BUFG         |                            | note_c/clear                  |                5 |             18 |
@@ -71,7 +72,7 @@ Table of Contents
 |  CLK_IBUF_BUFG         |                            | note_e/count0_carry__0_n_2    |                5 |             18 |
 |  CLK_IBUF_BUFG         |                            | note_f/count0_carry__0_n_2    |                5 |             18 |
 |  CLK_IBUF_BUFG         |                            | note_g/count0_carry__0_n_2    |                5 |             18 |
-|  J_MIC3_Pin1_OBUF_BUFG |                            |                               |               17 |             54 |
+|  J_MIC3_Pin1_OBUF_BUFG |                            |                               |               19 |             52 |
 +------------------------+----------------------------+-------------------------------+------------------+----------------+
 
 
