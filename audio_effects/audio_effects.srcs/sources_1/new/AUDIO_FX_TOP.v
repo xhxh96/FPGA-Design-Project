@@ -69,7 +69,7 @@ module AUDIO_FX_TOP(
     //////////////////////////////////////////////////////////////////////////////////
     // Clock Divider Module: Generate necessary clocks from 100MHz FPGA CLK
     // Please create the clock divider module and instantiate it here.
-      wire clk_20k, clk_50M, clk_1s, clk_30k, clk_40k, clk_50k, clk_15k, clk_5k;
+      wire clk_20k, clk_50M, clk_1s, clk_30k, clk_40k, clk_50k, clk_15k, clk_5k, clk_500ms;
       
       slowClock_20k clock_unit1 (CLK, clk_20k);
       slowClock_50M clock_unit2 (CLK, clk_50M);
@@ -79,6 +79,7 @@ module AUDIO_FX_TOP(
       slowClock_15k clock_unit6 (CLK, clk_15k);
       slowClock_5k clock_unit7 (CLK, clk_5k);
       slowClock_1s clock_unit8 (CLK, RESET, clk_1s);
+      slowClock_500ms clock_unit9 (CLK, clk_500ms);
       
      //////////////////////////////////////////////////////////////////////////////////
      //SPI Module: Converting serial data into a 12-bit parallel register
@@ -117,7 +118,7 @@ module AUDIO_FX_TOP(
       wire [3:0] SECOND_OUT2, SECOND_OUT1; 
       
       alarm_sound siren (CLK, ALARM_PLAY);
-      alarm_clock alarm_unit (CLK, clk_1s, RESET, HOUR_2, HOUR_1, MINUTE_2, MINUTE_1, SET_TIME, SET_ALARM, STOP_ALARM, START_ALARM, ALARM_OUT, an, seg, SECOND_OUT2, SECOND_OUT1);
+      alarm_clock alarm_unit (CLK, clk_1s, clk_500ms, RESET, HOUR_2, HOUR_1, MINUTE_2, MINUTE_1, SET_TIME, SET_ALARM, STOP_ALARM, START_ALARM, ALARM_OUT, an, seg, SECOND_OUT2, SECOND_OUT1);
       
       assign led [15] =  ALARM_OUT;    
       assign led [3:0] = (SPECIAL_FEATURE) ? SECOND_OUT1 : sw[3:0];

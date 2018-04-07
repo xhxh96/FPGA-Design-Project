@@ -17,6 +17,7 @@ read_verilog -library xil_defaultlib {
   {C:/Users/Xian Hao/Desktop/audio_effects/audio_effects.srcs/sources_1/new/display_clock.v}
   {C:/Users/Xian Hao/Desktop/audio_effects/audio_effects.srcs/sources_1/new/clock_operation.v}
   {C:/Users/Xian Hao/Desktop/audio_effects/audio_effects.srcs/sources_1/new/alarm_function.v}
+  {C:/Users/Xian Hao/Desktop/audio_effects/audio_effects.srcs/sources_1/new/slowClock_500ms.v}
   {C:/Users/Xian Hao/Desktop/audio_effects/audio_effects.srcs/sources_1/new/slowClock_5k.v}
   {C:/Users/Xian Hao/Desktop/audio_effects/audio_effects.srcs/sources_1/new/slowClock_50k.v}
   {C:/Users/Xian Hao/Desktop/audio_effects/audio_effects.srcs/sources_1/new/slowClock_30k.v}

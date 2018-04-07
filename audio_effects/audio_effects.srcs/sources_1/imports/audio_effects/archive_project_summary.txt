@@ -6,7 +6,7 @@
 *  PLEASE READ THIS REPORT TO GET THE DETAILED INFORMATION ABOUT THE PROJECT DATA THAT
 *  WAS ARCHIVED FOR THE CURRENT PROJECT
 *
-* The report is divided into following five sections:-
+* The report is divided into following four sections:-
 *
 * Section (1) - PROJECT INFORMATION
 *  This section provides the details of the current project that was archived
@@ -42,16 +42,7 @@
 Section (1) - PROJECT INFORMATION
 ---------------------------------
 Name      = audio_effects
-Directory = C:/Users/elechuad/Desktop/EE2020 EE2026 AY1718 SEM 1/Project Dev/jieyi_6oct/audio_effects/audio_effects
-
-WARNING: Please verify the compiled library directory path for the following property in the
-         current project. The path may point to an invalid location after opening this project.
-         This could happen if the project was unarchived in a location where this path is not
-         accessible. To resolve this issue, please set this property with the desired path
-         before launching simulation:-
-
-Property = compxlib.xsim_compiled_library_dir
-Path     = 
+Directory = D:/Undergrades/EE2020/AY1718_Sem1/AY1718_Project/Code/student/audio_effects
 
 Section (2) - INCLUDED RUNS
 ---------------------------
@@ -86,14 +77,14 @@ Section (3.2) - REMOTE SOURCES
 ------------------------------
 List of referenced 'remote' design files that were 'imported' into the archived project:-
 
+<sources_1>
+None
+
 <constrs_1>
 None
 
 <sim_1>
 None
-
-<sources_1>
-C:/Users/elechuad/Desktop/EE2020 EE2026 AY1718 SEM 1/Project Dev/jieyi_6oct/audio_effects/audio_effects/archive_project_summary.txt
 
 Section (3.3) - SOURCES SUMMARY
 -------------------------------
@@ -103,7 +94,6 @@ List of all the source files present in the archived project:-
 ./audio_effects.srcs/sources_1/new/SPI.v
 ./audio_effects.srcs/sources_1/imports/audio_effects.srcs/DA2CompRef.vhd
 ./audio_effects.srcs/sources_1/new/AUDIO_FX_TOP.v
-./audio_effects.srcs/sources_1/imports/audio_effects/archive_project_summary.txt
 
 <constrs_1>
 ./audio_effects.srcs/constrs_1/imports/Learn/Basys3_Master.xdc
@@ -122,9 +112,9 @@ Section (4) - JOURNAL/LOG FILES
 -------------------------------
 List of Journal/Log files that were added to the archived project:-
 
-Source File = C:/Users/elechuad/Desktop/EE2020 EE2026 AY1718 SEM 1/Project Dev/jieyi_6oct/audio_effects/audio_effects/vivado.jou
+Source File = D:/Undergrades/EE2020/AY1718_Sem1/AY1718_Project/Code/student/audio_effects/vivado.jou
 Archived Location = ./audio_effects/vivado.jou
 
-Source File = C:/Users/elechuad/Desktop/EE2020 EE2026 AY1718 SEM 1/Project Dev/jieyi_6oct/audio_effects/audio_effects/vivado.log
+Source File = D:/Undergrades/EE2020/AY1718_Sem1/AY1718_Project/Code/student/audio_effects/vivado.log
 Archived Location = ./audio_effects/vivado.log
 
