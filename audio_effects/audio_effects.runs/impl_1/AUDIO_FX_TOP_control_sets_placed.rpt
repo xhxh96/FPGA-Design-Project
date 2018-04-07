@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
-| Date         : Sun Apr 01 18:35:48 2018
+| Date         : Sat Apr 07 16:59:09 2018
 | Host         : DESKTOP-AUP50F2 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file AUDIO_FX_TOP_control_sets_placed.rpt
 | Design       : AUDIO_FX_TOP
@@ -22,8 +22,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    25 |
-| Unused register locations in slices containing registers |   120 |
+| Number of unique control sets                            |    73 |
+| Unused register locations in slices containing registers |   412 |
 +----------------------------------------------------------+-------+
 
 
@@ -33,11 +33,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              83 |           34 |
-| No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             149 |           41 |
-| Yes          | No                    | No                     |              96 |           51 |
-| Yes          | No                    | Yes                    |               0 |            0 |
+| No           | No                    | No                     |             200 |           68 |
+| No           | No                    | Yes                    |              66 |           27 |
+| No           | Yes                   | No                     |             213 |           71 |
+| Yes          | No                    | No                     |             140 |           61 |
+| Yes          | No                    | Yes                    |              25 |           17 |
 | Yes          | Yes                   | No                     |               8 |            3 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -45,34 +45,82 @@ Table of Contents
 3. Detailed Control Set Information
 -----------------------------------
 
-+------------------------+----------------------------+-------------------------------+------------------+----------------+
-|      Clock Signal      |        Enable Signal       |        Set/Reset Signal       | Slice Load Count | Bel Load Count |
-+------------------------+----------------------------+-------------------------------+------------------+----------------+
-|  clock_unit2/clk       |                            |                               |                1 |              1 |
-|  u2/J_DA2_Pin4_OBUF    |                            |                               |                1 |              2 |
-|  u2/J_DA2_Pin4_OBUF    | u2/shiftCounter[3]_i_1_n_0 | u2/temp1[15]_i_1_n_0          |                2 |              4 |
-|  u2/J_DA2_Pin4_OBUF    | u2/temp2                   | u2/temp1[15]_i_1_n_0          |                1 |              4 |
-|  CLK_IBUF_BUFG         |                            |                               |                4 |              4 |
-|  CLK_IBUF_BUFG         |                            | clock_unit1/count[11]_i_1_n_0 |                3 |             11 |
-|  u2/J_DA2_Pin4_OBUF    | u2/temp2                   |                               |                4 |             12 |
-| ~u1/J_MIC3_Pin4_OBUF   |                            |                               |                4 |             12 |
-|  CLK_IBUF_BUFG         |                            | J_MIC3_Pin1_OBUF_BUFG         |                3 |             12 |
-|  CLK_IBUF_BUFG         | note_a/new_clk0            |                               |                7 |             12 |
-|  CLK_IBUF_BUFG         | note_b/new_clk0            |                               |                6 |             12 |
-|  CLK_IBUF_BUFG         | note_c/new_clk0            |                               |                6 |             12 |
-|  CLK_IBUF_BUFG         | note_d/new_clk0            |                               |                5 |             12 |
-|  CLK_IBUF_BUFG         | note_e/new_clk0            |                               |                7 |             12 |
-|  CLK_IBUF_BUFG         | note_f/new_clk0            |                               |                9 |             12 |
-|  CLK_IBUF_BUFG         | note_g/new_clk0            |                               |                7 |             12 |
-| ~SPECIAL_FEATURE_IBUF  |                            |                               |                5 |             12 |
-|  CLK_IBUF_BUFG         |                            | note_a/count0_carry__0_n_2    |                5 |             18 |
-|  CLK_IBUF_BUFG         |                            | note_b/count0_carry__0_n_2    |                5 |             18 |
-|  CLK_IBUF_BUFG         |                            | note_c/clear                  |                5 |             18 |
-|  CLK_IBUF_BUFG         |                            | note_d/count0_carry__0_n_2    |                5 |             18 |
-|  CLK_IBUF_BUFG         |                            | note_e/count0_carry__0_n_2    |                5 |             18 |
-|  CLK_IBUF_BUFG         |                            | note_f/count0_carry__0_n_2    |                5 |             18 |
-|  CLK_IBUF_BUFG         |                            | note_g/count0_carry__0_n_2    |                5 |             18 |
-|  J_MIC3_Pin1_OBUF_BUFG |                            |                               |               19 |             52 |
-+------------------------+----------------------------+-------------------------------+------------------+----------------+
++---------------------------------------------------------+--------------------------------------------------+--------------------------------------------------------+------------------+----------------+
+|                       Clock Signal                      |                   Enable Signal                  |                    Set/Reset Signal                    | Slice Load Count | Bel Load Count |
++---------------------------------------------------------+--------------------------------------------------+--------------------------------------------------------+------------------+----------------+
+|  alarm_unit/alarm_main/buffer_hour_reg[4]_LDC_i_1_n_0   |                                                  | alarm_unit/alarm_main/buffer_hour_reg[4]_LDC_i_2_n_0   |                1 |              1 |
+|  clk_1s_BUFG                                            |                                                  | alarm_unit/alarm_main/buffer_hour_reg[0]_LDC_i_2_n_0   |                1 |              1 |
+|  clk_1s_BUFG                                            |                                                  | alarm_unit/alarm_main/buffer_hour_reg[1]_LDC_i_2_n_0   |                1 |              1 |
+|  clk_1s_BUFG                                            |                                                  | alarm_unit/alarm_main/buffer_hour_reg[2]_LDC_i_2_n_0   |                1 |              1 |
+|  clk_1s_BUFG                                            |                                                  | alarm_unit/alarm_main/buffer_hour_reg[3]_LDC_i_2_n_0   |                1 |              1 |
+|  alarm_unit/alarm_main/buffer_hour_reg[0]_LDC_i_1_n_0   |                                                  | alarm_unit/alarm_main/buffer_hour_reg[0]_LDC_i_2_n_0   |                1 |              1 |
+|  alarm_unit/alarm_main/buffer_hour_reg[1]_LDC_i_1_n_0   |                                                  | alarm_unit/alarm_main/buffer_hour_reg[1]_LDC_i_2_n_0   |                1 |              1 |
+|  alarm_unit/alarm_main/buffer_hour_reg[2]_LDC_i_1_n_0   |                                                  | alarm_unit/alarm_main/buffer_hour_reg[2]_LDC_i_2_n_0   |                1 |              1 |
+|  alarm_unit/alarm_main/buffer_hour_reg[3]_LDC_i_1_n_0   |                                                  | alarm_unit/alarm_main/buffer_hour_reg[3]_LDC_i_2_n_0   |                1 |              1 |
+|  clock_unit2/clk_50M                                    |                                                  |                                                        |                1 |              1 |
+|  alarm_unit/alarm_main/buffer_hour_reg[5]_LDC_i_1_n_0   |                                                  | alarm_unit/alarm_main/buffer_hour_reg[5]_LDC_i_2_n_0   |                1 |              1 |
+|  alarm_unit/alarm_main/buffer_minute_reg[0]_LDC_i_1_n_0 |                                                  | alarm_unit/alarm_main/buffer_minute_reg[0]_LDC_i_2_n_0 |                1 |              1 |
+|  alarm_unit/alarm_main/buffer_minute_reg[1]_LDC_i_1_n_0 |                                                  | alarm_unit/alarm_main/buffer_minute_reg[1]_LDC_i_2_n_0 |                1 |              1 |
+|  alarm_unit/alarm_main/buffer_minute_reg[2]_LDC_i_1_n_0 |                                                  | alarm_unit/alarm_main/buffer_minute_reg[2]_LDC_i_2_n_0 |                1 |              1 |
+|  alarm_unit/alarm_main/buffer_minute_reg[3]_LDC_i_1_n_0 |                                                  | alarm_unit/alarm_main/buffer_minute_reg[3]_LDC_i_2_n_0 |                1 |              1 |
+|  alarm_unit/alarm_main/buffer_minute_reg[4]_LDC_i_1_n_0 |                                                  | alarm_unit/alarm_main/buffer_minute_reg[4]_LDC_i_2_n_0 |                1 |              1 |
+|  alarm_unit/alarm_main/buffer_minute_reg[5]_LDC_i_1_n_0 |                                                  | alarm_unit/alarm_main/buffer_minute_reg[5]_LDC_i_2_n_0 |                1 |              1 |
+|  clk_1s_BUFG                                            |                                                  | alarm_unit/alarm_main/buffer_hour_reg[4]_LDC_i_2_n_0   |                1 |              1 |
+|  clk_1s_BUFG                                            |                                                  | alarm_unit/alarm_main/buffer_hour_reg[5]_LDC_i_2_n_0   |                1 |              1 |
+|  clk_1s_BUFG                                            |                                                  | alarm_unit/alarm_main/buffer_minute_reg[0]_LDC_i_2_n_0 |                1 |              1 |
+|  clk_1s_BUFG                                            |                                                  | alarm_unit/alarm_main/buffer_minute_reg[1]_LDC_i_2_n_0 |                1 |              1 |
+|  clk_1s_BUFG                                            |                                                  | alarm_unit/alarm_main/buffer_minute_reg[2]_LDC_i_2_n_0 |                1 |              1 |
+|  clk_1s_BUFG                                            |                                                  | alarm_unit/alarm_main/buffer_minute_reg[3]_LDC_i_2_n_0 |                1 |              1 |
+|  clk_1s_BUFG                                            |                                                  | alarm_unit/alarm_main/buffer_minute_reg[4]_LDC_i_2_n_0 |                1 |              1 |
+|  clk_1s_BUFG                                            |                                                  | alarm_unit/alarm_main/buffer_minute_reg[5]_LDC_i_2_n_0 |                1 |              1 |
+|  clk_1s_BUFG                                            | alarm_unit/alarm_main/buffer_hour[5]_P_i_1_n_0   | alarm_unit/alarm_main/buffer_hour_reg[0]_LDC_i_1_n_0   |                1 |              1 |
+|  clk_1s_BUFG                                            | alarm_unit/alarm_main/buffer_hour[5]_P_i_1_n_0   | alarm_unit/alarm_main/buffer_hour_reg[1]_LDC_i_1_n_0   |                1 |              1 |
+|  clk_1s_BUFG                                            | alarm_unit/alarm_main/buffer_hour[5]_P_i_1_n_0   | alarm_unit/alarm_main/buffer_hour_reg[2]_LDC_i_1_n_0   |                1 |              1 |
+|  clk_1s_BUFG                                            | alarm_unit/alarm_main/buffer_hour[5]_P_i_1_n_0   | alarm_unit/alarm_main/buffer_hour_reg[4]_LDC_i_1_n_0   |                1 |              1 |
+|  clk_1s_BUFG                                            | alarm_unit/alarm_main/buffer_hour[5]_P_i_1_n_0   | alarm_unit/alarm_main/buffer_hour_reg[5]_LDC_i_1_n_0   |                1 |              1 |
+|  clk_1s_BUFG                                            | alarm_unit/alarm_main/buffer_minute[5]_P_i_1_n_0 | alarm_unit/alarm_main/buffer_minute_reg[0]_LDC_i_1_n_0 |                1 |              1 |
+|  clk_1s_BUFG                                            | alarm_unit/alarm_main/buffer_minute[5]_P_i_1_n_0 | alarm_unit/alarm_main/buffer_minute_reg[1]_LDC_i_1_n_0 |                1 |              1 |
+|  clk_1s_BUFG                                            | alarm_unit/alarm_main/buffer_minute[5]_P_i_1_n_0 | alarm_unit/alarm_main/buffer_minute_reg[2]_LDC_i_1_n_0 |                1 |              1 |
+|  clk_1s_BUFG                                            | alarm_unit/alarm_main/buffer_minute[5]_P_i_1_n_0 | alarm_unit/alarm_main/buffer_minute_reg[3]_LDC_i_1_n_0 |                1 |              1 |
+|  clk_1s_BUFG                                            | alarm_unit/alarm_main/buffer_minute[5]_P_i_1_n_0 | alarm_unit/alarm_main/buffer_minute_reg[4]_LDC_i_1_n_0 |                1 |              1 |
+|  clk_1s_BUFG                                            | alarm_unit/alarm_main/buffer_minute[5]_P_i_1_n_0 | alarm_unit/alarm_main/buffer_minute_reg[5]_LDC_i_1_n_0 |                1 |              1 |
+|  clk_1s_BUFG                                            | alarm_unit/alarm_main/buffer_hour[5]_P_i_1_n_0   | alarm_unit/alarm_main/buffer_hour_reg[3]_LDC_i_1_n_0   |                1 |              1 |
+|  u2/J_DA2_Pin4_OBUF                                     |                                                  |                                                        |                1 |              2 |
+|  u2/J_DA2_Pin4_OBUF                                     | u2/shiftCounter[3]_i_1_n_0                       | u2/temp1[15]_i_1_n_0                                   |                1 |              4 |
+|  u2/J_DA2_Pin4_OBUF                                     | u2/temp2                                         | u2/temp1[15]_i_1_n_0                                   |                2 |              4 |
+|  clk_1s_BUFG                                            |                                                  | RESET                                                  |                2 |              6 |
+|  CLK_IBUF_BUFG                                          |                                                  | siren/new_clk0                                         |                4 |              7 |
+|  p_down1/clk_read                                       |                                                  |                                                        |                3 |             10 |
+|  CLK_IBUF_BUFG                                          |                                                  | clock_unit3/count[10]_i_1__0_n_0                       |                4 |             10 |
+|  CLK_IBUF_BUFG                                          |                                                  | clock_unit6/count[11]_i_1__2_n_0                       |                3 |             11 |
+|  CLK_IBUF_BUFG                                          |                                                  | clock_unit1/count[11]_i_1__0_n_0                       |                3 |             11 |
+|  CLK_IBUF_BUFG                                          |                                                  | clock_unit4/count[11]_i_1__1_n_0                       |                3 |             11 |
+|  u2/J_DA2_Pin4_OBUF                                     | u2/temp2                                         |                                                        |                3 |             12 |
+| ~u1/J_MIC3_Pin4_OBUF                                    |                                                  |                                                        |                5 |             12 |
+|  CLK_IBUF_BUFG                                          |                                                  | J_MIC3_Pin1_OBUF_BUFG                                  |                3 |             12 |
+|  CLK_IBUF_BUFG                                          | siren/new_clk0                                   |                                                        |                8 |             12 |
+|  CLK_IBUF_BUFG                                          | note_e/new_clk0                                  |                                                        |                6 |             12 |
+|  CLK_IBUF_BUFG                                          | note_f/new_clk0                                  |                                                        |                6 |             12 |
+|  CLK_IBUF_BUFG                                          | note_g/new_clk0                                  |                                                        |                6 |             12 |
+|  CLK_IBUF_BUFG                                          | note_b/new_clk0                                  |                                                        |                8 |             12 |
+|  CLK_IBUF_BUFG                                          | note_c/new_clk0                                  |                                                        |                4 |             12 |
+|  CLK_IBUF_BUFG                                          | note_d/new_clk0                                  |                                                        |                6 |             12 |
+|  CLK_IBUF_BUFG                                          | note_a/new_clk0                                  |                                                        |                4 |             12 |
+|  CLK_IBUF_BUFG                                          |                                                  | clock_unit7/count[13]_i_1__0_n_0                       |                4 |             13 |
+|  clk_1s_BUFG                                            | alarm_unit/alarm_main/alarm_minute0[3]_i_1_n_0   | RESET                                                  |                5 |             13 |
+|  CLK_IBUF_BUFG                                          | SWITCH_DOWN_i_1_n_0                              |                                                        |                3 |             14 |
+|  CLK_IBUF_BUFG                                          |                                                  | note_a/clear                                           |                5 |             18 |
+|  CLK_IBUF_BUFG                                          |                                                  | note_b/clear                                           |                5 |             18 |
+|  CLK_IBUF_BUFG                                          |                                                  | note_c/clear                                           |                5 |             18 |
+|  CLK_IBUF_BUFG                                          |                                                  | note_d/clear                                           |                5 |             18 |
+|  CLK_IBUF_BUFG                                          |                                                  | note_e/clear                                           |                5 |             18 |
+|  CLK_IBUF_BUFG                                          |                                                  | note_f/clear                                           |                5 |             18 |
+|  CLK_IBUF_BUFG                                          |                                                  | note_g/clear                                           |                5 |             18 |
+|  CLK_IBUF_BUFG                                          | SPECIAL_FEATURE_IBUF                             |                                                        |                7 |             18 |
+|  clk_read                                               |                                                  |                                                        |                8 |             34 |
+|  CLK_IBUF_BUFG                                          |                                                  | RESET                                                  |               13 |             48 |
+|  CLK_IBUF_BUFG                                          |                                                  |                                                        |               22 |             56 |
+|  J_MIC3_Pin1_OBUF_BUFG                                  |                                                  |                                                        |               28 |             85 |
++---------------------------------------------------------+--------------------------------------------------+--------------------------------------------------------+------------------+----------------+
 
 

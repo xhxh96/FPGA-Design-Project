@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
-| Date         : Sun Apr 01 18:36:10 2018
+| Date         : Sat Apr 07 16:59:31 2018
 | Host         : DESKTOP-AUP50F2 running 64-bit major release  (build 9200)
 | Command      : report_drc -file AUDIO_FX_TOP_drc_routed.rpt -pb AUDIO_FX_TOP_drc_routed.pb
 | Design       : AUDIO_FX_TOP
@@ -23,7 +23,7 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 2
+             Violations found: 19
 
 2. REPORT DETAILS
 -----------------
@@ -40,9 +40,100 @@ Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_des
 Refer to the device configuration user guide for more information.
 Related violations: <none>
 
-CKLD-2#1 Warning
-Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads  
-Clock net SPECIAL_FEATURE_IBUF is directly driven by an IO rather than a Clock Buffer or may be an IO driving a mix of Clock Buffer and non-Clock loads. This connectivity should be reviewed and corrected as appropriate. Driver(s): SPECIAL_FEATURE_IBUF_inst/O
+PDRC-153#1 Warning
+Gated clock check  
+Net alarm_unit/alarm_main/buffer_hour_reg[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin alarm_unit/alarm_main/buffer_hour_reg[0]_LDC_i_1/O, cell alarm_unit/alarm_main/buffer_hour_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net alarm_unit/alarm_main/buffer_hour_reg[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin alarm_unit/alarm_main/buffer_hour_reg[0]_LDC_i_1/O, cell alarm_unit/alarm_main/buffer_hour_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net alarm_unit/alarm_main/buffer_hour_reg[1]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin alarm_unit/alarm_main/buffer_hour_reg[1]_LDC_i_1/O, cell alarm_unit/alarm_main/buffer_hour_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#4 Warning
+Gated clock check  
+Net alarm_unit/alarm_main/buffer_hour_reg[1]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin alarm_unit/alarm_main/buffer_hour_reg[1]_LDC_i_1/O, cell alarm_unit/alarm_main/buffer_hour_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#5 Warning
+Gated clock check  
+Net alarm_unit/alarm_main/buffer_hour_reg[2]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin alarm_unit/alarm_main/buffer_hour_reg[2]_LDC_i_1/O, cell alarm_unit/alarm_main/buffer_hour_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#6 Warning
+Gated clock check  
+Net alarm_unit/alarm_main/buffer_hour_reg[3]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin alarm_unit/alarm_main/buffer_hour_reg[3]_LDC_i_1/O, cell alarm_unit/alarm_main/buffer_hour_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#7 Warning
+Gated clock check  
+Net alarm_unit/alarm_main/buffer_hour_reg[4]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin alarm_unit/alarm_main/buffer_hour_reg[4]_LDC_i_1/O, cell alarm_unit/alarm_main/buffer_hour_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#8 Warning
+Gated clock check  
+Net alarm_unit/alarm_main/buffer_hour_reg[5]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin alarm_unit/alarm_main/buffer_hour_reg[5]_LDC_i_1/O, cell alarm_unit/alarm_main/buffer_hour_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#9 Warning
+Gated clock check  
+Net alarm_unit/alarm_main/buffer_hour_reg[5]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin alarm_unit/alarm_main/buffer_hour_reg[5]_LDC_i_1/O, cell alarm_unit/alarm_main/buffer_hour_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#10 Warning
+Gated clock check  
+Net alarm_unit/alarm_main/buffer_minute_reg[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin alarm_unit/alarm_main/buffer_minute_reg[0]_LDC_i_1/O, cell alarm_unit/alarm_main/buffer_minute_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#11 Warning
+Gated clock check  
+Net alarm_unit/alarm_main/buffer_minute_reg[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin alarm_unit/alarm_main/buffer_minute_reg[0]_LDC_i_1/O, cell alarm_unit/alarm_main/buffer_minute_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#12 Warning
+Gated clock check  
+Net alarm_unit/alarm_main/buffer_minute_reg[1]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin alarm_unit/alarm_main/buffer_minute_reg[1]_LDC_i_1/O, cell alarm_unit/alarm_main/buffer_minute_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#13 Warning
+Gated clock check  
+Net alarm_unit/alarm_main/buffer_minute_reg[2]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin alarm_unit/alarm_main/buffer_minute_reg[2]_LDC_i_1/O, cell alarm_unit/alarm_main/buffer_minute_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#14 Warning
+Gated clock check  
+Net alarm_unit/alarm_main/buffer_minute_reg[3]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin alarm_unit/alarm_main/buffer_minute_reg[3]_LDC_i_1/O, cell alarm_unit/alarm_main/buffer_minute_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#15 Warning
+Gated clock check  
+Net alarm_unit/alarm_main/buffer_minute_reg[4]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin alarm_unit/alarm_main/buffer_minute_reg[4]_LDC_i_1/O, cell alarm_unit/alarm_main/buffer_minute_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#16 Warning
+Gated clock check  
+Net alarm_unit/alarm_main/buffer_minute_reg[5]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin alarm_unit/alarm_main/buffer_minute_reg[5]_LDC_i_1/O, cell alarm_unit/alarm_main/buffer_minute_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#17 Warning
+Gated clock check  
+Net p_down1/clk_read is a gated clock net sourced by a combinational pin p_down1/memory_reg_i_1/O, cell p_down1/memory_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT p_down1/memory_reg_i_1 is driving clock pin of 11 cells. This could lead to large hold time violations. First few involved cells are:
+    p_down1/j_reg_rep[0] {FDRE}
+    p_down1/j_reg_rep[1] {FDRE}
+    p_down1/j_reg_rep[2] {FDRE}
+    p_down1/j_reg_rep[3] {FDRE}
+    p_down1/j_reg_rep[4] {FDRE}
+
 Related violations: <none>
 
 

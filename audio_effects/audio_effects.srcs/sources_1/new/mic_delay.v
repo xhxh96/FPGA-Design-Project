@@ -1,24 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 23.03.2018 14:56:56
-// Design Name: 
-// Module Name: mic_delay
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 
 module mic_delay(
     input clk_write,
@@ -41,7 +21,7 @@ module mic_delay(
     end
     
     always @ (posedge clk_read) begin
-        j <= (j == 19999) ? 0 : j+2;
+        j <= (j == 19999) ? 0 : j+1;
         data_out <= memory[j];
     end
     

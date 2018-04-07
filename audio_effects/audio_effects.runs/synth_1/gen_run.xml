@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1522578889">
-  <File Type="PA-TCL" Name="AUDIO_FX_TOP.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1523091483">
   <File Type="RDS-PROPCONSTRS" Name="AUDIO_FX_TOP_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="AUDIO_FX_TOP.tcl"/>
   <File Type="RDS-RDS" Name="AUDIO_FX_TOP.vds"/>
   <File Type="RDS-UTIL" Name="AUDIO_FX_TOP_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="AUDIO_FX_TOP_utilization_synth.pb"/>
@@ -10,57 +10,100 @@
   <File Type="VDS-TIMING-PB" Name="AUDIO_FX_TOP_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/mic_delay.v">
+    <File Path="$PSRCDIR/sources_1/new/display_clock.v">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../audio_effects/audio_effects.srcs/sources_1/new/display_clock.v"/>
+        <Attr Name="ImportTime" Val="1523091417"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/clock_g.v">
+    <File Path="$PSRCDIR/sources_1/new/clock_operation.v">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../audio_effects/audio_effects.srcs/sources_1/new/clock_operation.v"/>
+        <Attr Name="ImportTime" Val="1523089452"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/clock_a.v">
+    <File Path="$PSRCDIR/sources_1/new/alarm_function.v">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../audio_effects/audio_effects.srcs/sources_1/new/alarm_function.v"/>
+        <Attr Name="ImportTime" Val="1523087189"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/clock_f.v">
+    <File Path="$PSRCDIR/sources_1/new/slowClock_5k.v">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../audio_effects/audio_effects.srcs/sources_1/new/slowClock_5k.v"/>
+        <Attr Name="ImportTime" Val="1522997258"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/clock_e.v">
+    <File Path="$PSRCDIR/sources_1/new/slowClock_50k.v">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../audio_effects/audio_effects.srcs/sources_1/new/slowClock_50k.v"/>
+        <Attr Name="ImportTime" Val="1522997234"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/clock_b.v">
+    <File Path="$PSRCDIR/sources_1/new/slowClock_30k.v">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../audio_effects/audio_effects.srcs/sources_1/new/slowClock_30k.v"/>
+        <Attr Name="ImportTime" Val="1522997356"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/clock_d.v">
+    <File Path="$PSRCDIR/sources_1/new/slowClock_15k.v">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../audio_effects/audio_effects.srcs/sources_1/new/slowClock_15k.v"/>
+        <Attr Name="ImportTime" Val="1522997354"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/clock_c.v">
+    <File Path="$PSRCDIR/sources_1/new/pitch_up.v">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../audio_effects/audio_effects.srcs/sources_1/new/pitch_up.v"/>
+        <Attr Name="ImportTime" Val="1522999298"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/pitch_down.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../audio_effects/audio_effects.srcs/sources_1/new/pitch_down.v"/>
+        <Attr Name="ImportTime" Val="1522999280"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/alarm_clock.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../audio_effects/audio_effects.srcs/sources_1/new/alarm_clock.v"/>
+        <Attr Name="ImportTime" Val="1523091428"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/slowClock_1s.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../audio_effects/audio_effects.srcs/sources_1/new/slowClock_1s.v"/>
+        <Attr Name="ImportTime" Val="1522997876"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -68,6 +111,89 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/slowClock_50m.v">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../audio_effects/audio_effects.srcs/sources_1/new/slowClock_50m.v"/>
+        <Attr Name="ImportTime" Val="1522997860"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/alarm_sound.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../audio_effects/audio_effects.srcs/sources_1/new/alarm_sound.v"/>
+        <Attr Name="ImportTime" Val="1522683160"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/mic_delay.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../audio_effects/audio_effects.srcs/sources_1/new/mic_delay.v"/>
+        <Attr Name="ImportTime" Val="1522997916"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clock_g.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../audio_effects/audio_effects.srcs/sources_1/new/clock_g.v"/>
+        <Attr Name="ImportTime" Val="1522388170"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clock_a.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../audio_effects/audio_effects.srcs/sources_1/new/clock_a.v"/>
+        <Attr Name="ImportTime" Val="1522387690"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clock_f.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../audio_effects/audio_effects.srcs/sources_1/new/clock_f.v"/>
+        <Attr Name="ImportTime" Val="1522387286"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clock_e.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../audio_effects/audio_effects.srcs/sources_1/new/clock_e.v"/>
+        <Attr Name="ImportTime" Val="1522386960"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clock_b.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../audio_effects/audio_effects.srcs/sources_1/new/clock_b.v"/>
+        <Attr Name="ImportTime" Val="1522387886"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clock_d.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../audio_effects/audio_effects.srcs/sources_1/new/clock_d.v"/>
+        <Attr Name="ImportTime" Val="1522386514"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clock_c.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../audio_effects/audio_effects.srcs/sources_1/new/clock_c.v"/>
+        <Attr Name="ImportTime" Val="1522386272"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -75,7 +201,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/SPI.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../EE2020 EE2026 AY1718 SEM 1/audio_effects.srcs/sources_1/new/SPI.v"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../EE2020 EE2026 AY1718 SEM 1/audio_effects.srcs/sources_1/new/SPI.v"/>
         <Attr Name="ImportTime" Val="1507284396"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -84,6 +210,8 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/slowClock_20k.v">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../audio_effects/audio_effects.srcs/sources_1/new/slowClock_20k.v"/>
+        <Attr Name="ImportTime" Val="1522997856"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -91,15 +219,24 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/audio_effects.srcs/DA2CompRef.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../EE2020 EE2026 AY1718 SEM 1/audio_effects.srcs/DA2CompRef.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../EE2020 EE2026 AY1718 SEM 1/audio_effects.srcs/DA2CompRef.vhd"/>
         <Attr Name="ImportTime" Val="1506565364"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/slowClock_40k.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../audio_effects/audio_effects.srcs/sources_1/new/slowClock_40k.v"/>
+        <Attr Name="ImportTime" Val="1522997720"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/AUDIO_FX_TOP.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../EE2020 EE2026 AY1718 SEM 1/audio_effects.srcs/sources_1/new/AUDIO_FX_TOP.v"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../EE2020 EE2026 AY1718 SEM 1/audio_effects.srcs/sources_1/new/AUDIO_FX_TOP.v"/>
         <Attr Name="ImportTime" Val="1507284394"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -108,11 +245,11 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/audio_effects/archive_project_summary.txt">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../EE2020 EE2026 AY1718 SEM 1/Project Dev/jieyi_6oct/audio_effects/audio_effects/archive_project_summary.txt"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../EE2020 EE2026 AY1718 SEM 1/Project Dev/jieyi_6oct/audio_effects/audio_effects/archive_project_summary.txt"/>
         <Attr Name="ImportTime" Val="1507296476"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/archive_project_summary.txt"/>
+    <File Path="$PPRDIR/../../audio_effects/archive_project_summary.txt"/>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="AUDIO_FX_TOP"/>
@@ -123,7 +260,7 @@
     <Filter Type="Constrs"/>
     <File Path="$PSRCDIR/constrs_1/imports/Learn/Basys3_Master.xdc">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../Learn/Basys3_Master.xdc"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../Learn/Basys3_Master.xdc"/>
         <Attr Name="ImportTime" Val="1490081536"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
